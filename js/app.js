@@ -56,13 +56,18 @@ document.getElementById('verify-pin').addEventListener('click', function(){
        const typeNumberField = document.getElementById('typed-number');
          const typeNumber = typeNumberField.value;
 
+         const pinSuccess = document.getElementById('pin-success');
+         const pinFail = document.getElementById('pin-fail');
+
+  
          if (typeNumber === currentPin){
             const pinSuccess = document.getElementById('pin-success');
             pinSuccess.style.display = 'block';
+            pinFail.style.display = 'none';
          }
          else{
-            const pinFail = document.getElementById('pin-fail');
             pinFail.style.display = 'block';
+            pinSuccess.style.display = 'none';
          }
 
 });

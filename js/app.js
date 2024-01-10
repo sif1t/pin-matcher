@@ -47,3 +47,22 @@ document.getElementById('calculator').addEventListener('click', function(event){
     }
 
 });
+
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+       const displayPin = document.getElementById('display-pin');
+       const currentPin = displayPin.value;
+
+       const typeNumberField = document.getElementById('typed-number');
+         const typeNumber = typeNumberField.value;
+
+         if (typeNumber === currentPin){
+            const pinSuccess = document.getElementById('pin-success');
+            pinSuccess.style.display = 'block';
+         }
+         else{
+            const pinFail = document.getElementById('pin-fail');
+            pinFail.style.display = 'block';
+         }
+
+});
